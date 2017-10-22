@@ -18,28 +18,28 @@
         http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-2.5.xsd"
     default-lazy-init="false">
 
-    <bean id="getResourceById" class="com.github.kislayverma.nexus.routes.ProxyRoute">
+    <bean id="getResourceById" class="com.github.kislayverma.throo.routes.ProxyRoute">
         <property name="httpMethod"    value="GET"/>
         <property name="route"         value="/resource/:id"/>
         <property name="targetBaseUrl" value="localhost"/>
         <property name="port"          value="8081"/>
         <property name="timeout"       value="1000"/>
     </bean>
-    <bean id="queryResourceById" class="com.github.kislayverma.nexus.routes.ProxyRoute">
+    <bean id="queryResourceById" class="com.github.kislayverma.throo.routes.ProxyRoute">
         <property name="httpMethod"    value="GET"/>
         <property name="route"         value="/resource/queryResource"/>
         <property name="targetBaseUrl" value="localhost"/>
         <property name="port"          value="8081"/>
         <property name="timeout"       value="1000"/>
     </bean>
-    <bean id="routeAllApis" class="com.github.kislayverma.nexus.routes.ProxyRoute">
+    <bean id="routeAllApis" class="com.github.kislayverma.throo.routes.ProxyRoute">
         <property name="httpMethod"    value="GET"/>
         <property name="route"         value="/api*"/>
         <property name="targetBaseUrl" value="localhost"/>
         <property name="port"          value="8081"/>
         <property name="timeout"       value="1000"/>
     </bean>
-    <bean id="createResource" class="com.github.kislayverma.nexus.routes.ProxyRoute">
+    <bean id="createResource" class="com.github.kislayverma.throo.routes.ProxyRoute">
         <property name="httpMethod"    value="POST"/>
         <property name="route"         value="/resource"/>
         <property name="targetBaseUrl" value="localhost"/>
